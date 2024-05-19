@@ -4,14 +4,14 @@ import shutil
 # Use custom trained model and predict results
 model = YOLO("yolov8n.pt")
 
-#Define the location of the database
+# Define the location of the database
 source = "/workdir/tests/data/"
 output = "/workdir/results/"
 
-#Configure the prediction
+# Configure the prediction
 resultsDetect = model.predict(source, conf=0.5, stream=True, show=False, save=True)
 
-#Creates bounding boxes
+# Creates bounding boxes
 for result in resultsDetect:
     boxes = result.boxes
     masks = result.masks

@@ -28,8 +28,10 @@ endef
 check:
 	black --check --line-length 100 ${module}
 	black --check --line-length 100 tests
+	black --check --line-length 100 src
 	flake8 --max-line-length 100 ${module}
 	flake8 --max-line-length 100 tests
+	flake8 --max-line-length 100 src
 	mypy ${module}
 	mypy tests
 
@@ -48,6 +50,7 @@ coverage: setup
 format:
 	black --line-length 100 ${module}
 	black --line-length 100 tests
+	black --line-length 100 src
 
 init: setup tests
 
