@@ -10,5 +10,6 @@ description-file = "README.md"
 home-page = "https://github.com/niesfutbol/tracking_data"
 module = "tracking_data"
 requires = [
+	"dill"
 ]
 requires-python=">=3.9"

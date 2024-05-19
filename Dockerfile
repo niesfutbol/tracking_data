@@ -1,6 +1,6 @@
-FROM python:3
-WORKDIR /workdir
+FROM ultralytics/ultralytics:latest-python
 COPY . .
+RUN apt update && apt install --yes make
 RUN pip install --upgrade pip && pip install \
     black \
     flake8 \
