@@ -14,7 +14,7 @@ all: check coverage mutants
 		tests
 
 module = tracking_data
-codecov_token = 6c56bccb-1758-4ed9-8161-97c845591c26
+codecov_token = c3c8d39f-911b-4d4e-91dc-1445b162379c
 
 define lint
 	pylint \
